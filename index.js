@@ -33,13 +33,9 @@ filtersBtn.addEventListener("click", (evt) => {
   leftNavbar.classList.toggle("active");
 });
 
-topNavbar.addEventListener("click", (evt) => {
-  evt.stopPropagation();
-});
+topNavbar.addEventListener("click", (evt) => evt.stopPropagation());
 
-leftNavbar.addEventListener("click", (evt) => {
-  evt.stopPropagation();
-});
+leftNavbar.addEventListener("click", (evt) => evt.stopPropagation());
 
 const setLeftRatingValue = (perRating) => {
   let rating;
