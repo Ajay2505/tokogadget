@@ -176,24 +176,24 @@ const data = [
 const setMobileCards = () => {
   data.forEach((mobile) => {
     mobileCardsDiv.innerHTML += `
-      <div class="w-full h-fit pt-7 pb-4 pl-4 p-2 rounded-md border border-gray-200 boxShadow">
-      <img class="h-36 mb-4 mx-auto" src=${mobile.image} alt=${mobile.name}>
-      <div class="grid grid-flow-col w-full justify-center md:justify-start grid-rows-5">
-         <h1 class="font-semibold">${mobile.name}</h1>
-         <p class="text-gray-500">${mobile.spec}</p>
-         <p class="${mobile.hasOffer && "text-red-400 "}p-0 m-0">Rp
+    <div class="w-full h-fit flex flex-col justify-between gap-3 pt-7 pb-4 pl-4 p-2 rounded-md border border-gray-200 boxShadow">
+      <div class="self-start w-full">
+        <img class="h-36 mb-4 mx-auto" src=${mobile.image} alt=${mobile.name}>
+        <h1 class="font-semibold m-0 p-0">${mobile.name}</h1>
+         <p class="text-gray-500 m-0">${mobile.spec}</p>
+         <p class="${mobile.hasOffer && "text-red-400 "} p-0 m-0">Rp
             ${mobile.hasOffer ? mobile.newPrice : mobile.price}
          </p>
-         <p class="${mobile.hasOffer && "line-through "}p-0 m-0">
+         <p class="${mobile.hasOffer && "line-through "} p-0 m-0">
             ${mobile.hasOffer ? "Rp " + mobile.price : " "}
          </p>
-         <div class="w-full flex flex-row gap-1 mt-3 items-center">
-            <i class="fa-solid fa-circle text-gray-400 rounded-full"></i>
-            <i class="fa-solid fa-circle text-blue-500 rounded-full"></i>
-            <i class="fa-solid fa-circle text-pink-500 rounded-full"></i> 
-         </div>
       </div>
-   </div> `;
+      <div class="w-full flex flex-row gap-1 items-center self-end">
+        <i class="fa-solid fa-circle text-gray-400 rounded-full"></i>
+        <i class="fa-solid fa-circle text-blue-500 rounded-full"></i>
+        <i class="fa-solid fa-circle text-pink-500 rounded-full"></i> 
+      </div>
+    </div> `;
   });
 };
 
