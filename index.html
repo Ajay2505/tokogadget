@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>tokogadget</title>
+   <!-- Font awesome Icons -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+   <!-- Tailwind -->
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+   <!-- custom css -->
+   <link rel="stylesheet" href="./index.css">
+</head>
+
+<body class="w-full h-screen overflow-y-scroll">
+   <!-- Navbar -->
+   <nav id="topNavbar" class="md:px-7 md:pt-4 flex flex-col md:mb-3 md:flex-row md:justify-between md:items-center">
+      <h1 class="px-6 py-4 md:p-0 font-bold md:text-2xl flex justify-between items-center text-blue-600">
+         tokogadget
+         <i id="bars" class="fa-solid fa-bars px-3 cursor-pointer py-1 border-2 border-blue-600 hover:text-black hover:border-black rounded-md md:hidden"></i>
+      </h1>
+      <input type="search" class="hidden searchInput md:block border-2 bg-gray-100 focus:border-3
+         focus:border-blue-500 border-gray-200 rounded-md outline-none w-2/6 py-1 px-3"
+         placeholder="&#xF002; &#xf002 cari gadget">
+         
+      <div class="hidden md:flex flex-row gap-3 items-center justify-center">
+         <i class="fa-solid fa-cart-shopping cursor-pointer p-2 text-gray-600 hover:text-gray-500"></i>
+         <i class="fa-solid fa-bell p-2 cursor-pointer text-gray-600 hover:text-gray-500"></i>
+         <img src="./assets/Ajay.jpg" alt="profile img" class="w-7 rounded-2xl">
+         <div class="flex flex-row items-center relative profile cursor-pointer">
+            <h1 style="max-width: 10rem; max-height: min-content;" class="py-1">ajay</h1>
+            <i class="fa-solid fa-angle-down py-2 text-gray-500 ml-1"></i>
+            <div class="profileDropdown flex-col text-center absolute z-9 top-8 w-40 right-2 bg-gray-200 rounded-md">
+               <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile</p>
+               <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile </p>
+               <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile </p>
+               <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile</p>
+            </div>
+         </div>
+      </div>
+      <!-- Mobile nav-items -->
+      <div id="mobileNavItems"
+         class="mobileNavItems grid w-full h-fit grid-flow-row bg-gray-100 opacity-0 auto-cols-auto gap-4 justify-center items-center py-4 z-10 md:hidden">
+         <input type="search"
+            class="border-2 w-full focus:border-3 focus:border-blue-500 border-gray-200 rounded-md outline-none py-2 px-3"
+            placeholder="cari gadget">
+         <div class="cursor-pointer flex flex-row justify-center bg-white hover:bg-gray-300 py-2">
+            <i class="fa-solid fa-cart-shopping my-auto mr-2 text-gray-600"></i>
+            <h2>Cart</h2>
+         </div>
+         <div class="cursor-pointer flex flex-row justify-center items-center bg-white hover:bg-gray-300 py-2">
+            <i class="fa-solid fa-bell mr-2 text-gray-600"></i>
+            <h2>Notifications</h2>
+         </div>
+         <div
+            class="cursor-pointer flex max-w-xs px-4 flex-row justify-center items-center bg-white hover:bg-gray-300 py-2">
+            <img src="./assets/Ajay.jpg" alt="" class="w-7 rounded-2xl mr-2">
+            <div class="flex flex-row items-center relative profile cursor-pointer">
+               <h1 style="max-width: 10rem; max-height: min-content;" class="py-1">Ajay Kumar</h1>
+               <i class="fa-solid fa-angle-down py-2 text-gray-500 ml-1"></i>
+               <div
+                  class="profileDropdown flex-col text-center absolute z-9 top-8 w-40 right-0 bg-gray-200 rounded-md">
+                  <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile</p>
+                  <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile </p>
+                  <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile </p>
+                  <p class="px-2 py-2 hover:bg-gray-300 cursor-pointer">Profile</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- Navbar end -->
+
+   <hr class="md:my-3 mb-3">
+
+   <div class="px-7">
+      <h1 class="mb-4"><span class="text-gray-500"> Brands</span> > Smartphones</h1>
+
+      <div class="flex justify-between w-full">
+         <h1 class="text-xl font-semibold">Smartphones (599)</h1>
+         <select
+            class="mobileOptions cursor-pointer outline-none shadow-lg rounded-md px-2 py-1 border-2 border-gray-200 focus:border-gray-400">
+            <option value="1">Most appropriate</option>
+            <option value="2">Best review</option>
+            <option value="3">Latest</option>
+            <option value="4">Highest price</option>
+            <option value="5">Highest price</option>
+         </select>
+      </div>
+
+      <br>
+
+      <div class="md:hidden mb-5 w-full font-semibold text-xl flex flex-row-reverse items-center">
+         <i id="filtersBtn" class="fa-solid fa-sliders text-blue-600 hover:text-black hover:border-black rounded-md p-1 border-2 px-2 border-blue-400 cursor-pointer"></i>
+      </div>
+
+      <div class="w-full flex">
+
+         <div id="leftNavbar" class="rounded-md boxShadow pl-3 pr-2 py-3 w-2/12">
+            <h1 class="text-lg font-semibold mb-2">Filter</h1>
+            <h1 class="text-md font-medium">Rating</h1>
+            <div class="middle w-full">
+               <div class="multi-range-slider">
+                  <input type="range" id="input-left" step="1" min="1" max="5" value="4">
+                  <input type="range" id="input-right" step="1" min="1" max="5" value="5">
+
+                  <div class="slider">
+                     <div class="track"></div>
+                     <div class="range"></div>
+                     <div class="thumb left"></div>
+                     <div class="thumb right"></div>
+                  </div>
+               </div>
+            </div>
+
+            <div id="ratingStars" class="w-full grid grid-flow-col mt-2">
+               <div class="w-full flex flex-row">
+                  <i class="fa-solid fa-star my-auto text-yellow-300"></i>
+                  <h1>1</h1>
+               </div>
+               <div class="w-full flex flex-row">
+                  <i class="fa-solid fa-star my-auto text-yellow-300"></i>
+                  <h1>2</h1>
+               </div>
+               <div class="w-full flex flex-row">
+                  <i class="fa-solid fa-star my-auto text-yellow-300"></i>
+                  <h1>3</h1>
+               </div>
+               <div class="w-full flex flex-row justify-center">
+                  <i class="fa-solid fa-star my-auto text-yellow-300"></i>
+                  <h1>4</h1>
+               </div>
+               <div class="w-full flex flex-row justify-end">
+                  <i class="fa-solid fa-star my-auto text-yellow-300"></i>
+                  <h1>5</h1>
+               </div>
+            </div>
+
+            <hr class="my-3">
+
+            <p class="font-medium mb-2">Price</p>
+            <label>Rp</label>
+            <input type="text" class="outline-none border-2 border-gray-300 bg-white
+            focus:border-blue-400 md:bg-gray-100 rounded-md px-2 p-1 mb-3"
+               placeholder="Lowest Price">
+            <label>Rp</label>
+            <input type="text" class="outline-none border-2 border-gray-300 bg-white
+            focus:border-blue-400 md:bg-gray-100 rounded-md px-2 p-1 mb-3"
+               placeholder="Highest Price">
+
+            <hr class="my-2">
+
+            <p class="font-medium mb-2">Brand</p>
+            
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>Apple</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>Samsung</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>Xiomi</p>
+            </div>
+            <p class="text-blue-600 cursor-pointer text-center hover:underline">See more details</p>
+         
+            <hr class="my-3">
+         
+            <p class="font-medium mb-2">Battery</p>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>>6000mAh</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>5000 - 5999mAh</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>4000 - 4999mAh</p>
+            </div>
+            <p class="text-blue-600 cursor-pointer text-center hover:underline">See more details</p>
+         
+            <hr class="my-3">
+
+            <p class="font-medium mb-2">Memory</p>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>18 GB</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>12 GB</p>
+            </div>
+            <div class="flex flex-row gap-3 mb-2">
+               <input type="checkbox" class="h-4 w-4 my-auto cursor-pointer">
+               <p>8 GB</p>
+            </div>
+
+
+         </div>
+
+         <div id="mobileCardsDiv" class="ml-7 mb-16 w-full grid grid-cols-2 grid-flow-row gap-4 
+         sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+         </div>
+      </div>
+
+   </div>
+
+   <script src="./index.js"></script>
+</body>
+
+</html>
