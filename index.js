@@ -58,7 +58,7 @@ const setLeftRatingValue = (perRating) => {
   }
 
   ratingStars[rating].children[0].style.color = "#ffe51d";
-  ratingStars[rating].children[1].style.color = "#000";
+  ratingStars[rating].children[1].style.color = "#000000";
   removeRating();
 };
 
@@ -82,7 +82,7 @@ const setRightRatingValue = (perRating) => {
       break;
   }
   ratingStars[rating].children[0].style.color = "#ffe51d";
-  ratingStars[rating].children[1].style.color = "#000";
+  ratingStars[rating].children[1].style.color = "#000000";
   removeRating();
 };
 
@@ -92,7 +92,7 @@ const removeRating = () => {
       continue;
     }
     ratingStars[idx].children[0].style.color = "#fff6af";
-    ratingStars[idx].children[1].style.color = "gray";
+    ratingStars[idx].children[1].style.color = "#E8E2E2";
   }
 };
 
