@@ -172,7 +172,7 @@ const data = [
 const setMobileCards = () => {
   data.forEach((mobile) => {
     mobileCardsDiv.innerHTML += `
-    <div class="w-full h-fit flex flex-col justify-between gap-3 pt-7 pb-4 pl-4 p-2 rounded-md border border-gray-200 boxShadow">
+    <div class="anime w-full h-fit flex flex-col justify-between gap-3 pt-7 pb-4 pl-4 p-2 rounded-md border border-gray-200 boxShadow">
       <div class="self-start w-full">
         <img class="h-36 mb-4 mx-auto" src=${mobile.image} alt=${mobile.name}>
         <h1 class="font-semibold m-0 p-0">${mobile.name}</h1>
@@ -181,7 +181,7 @@ const setMobileCards = () => {
             ${mobile.hasOffer ? mobile.newPrice : mobile.price}
          </p>
          <p class="${mobile.hasOffer && "line-through "} p-0 m-0">
-            ${mobile.hasOffer ? "Rp " + mobile.price : " "}
+            ${mobile.hasOffer ? "Rp " + mobile.price : "&nbsp;"}
          </p>
       </div>
       <div class="w-full flex flex-row gap-1 items-center self-end">

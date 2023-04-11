@@ -1,3 +1,9 @@
+* {
+   margin: 0;;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 .mobileNavItems {
    position: fixed;
    top: 0;
@@ -20,8 +26,12 @@
    display: flex;
 }
 
+.profileDropdown p {
+   border-radius: inherit;
+}
+
 select.mobileOptions option:checked {
-   color: rgb(50, 52, 193);
+   color: rgb(0, 4, 255);
    font-weight: 600;
 }
 
@@ -32,6 +42,18 @@ select.mobileOptions option:checked {
 .boxShadow:hover {
    box-shadow: 1px 1px 6px rgb(0, 0, 0, 0.45);
    transition: all 0.4s;
+}
+
+.anime {
+   transition: transform .3s;
+}
+
+.anime:hover {
+   transform: translateY(-.4rem);
+}
+
+.anime:active {
+   box-shadow: 0 1px 0 rgb(0, 0, 0, 0.15);
 }
 
 /* Left Navbar */
